@@ -408,7 +408,7 @@
 				ScolPage2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 				ScolPage2.BorderSizePixel = 0
 				ScolPage2.Size = UDim2.new(0, 185, 0, 298)
-				ScolPage2.ScrollBarThickness = 3
+				ScolPage2.ScrollBarThickness = 0
 				ScolPage2.ScrollBarImageColor3 =  Color3.fromRGB(235, 235, 235)
 
 
