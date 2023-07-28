@@ -1562,7 +1562,7 @@ function create:Win()
 				end
 				return  labelfuc
 			end
-			function ems:LeftCenter(text)
+			function ems:CenterLabel(text)
 
 				local labelfuc = {}
 				local Labelxd = Instance.new("TextLabel")
