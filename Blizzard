@@ -1,5 +1,5 @@
 do 
-	local ui = game:GetService("CoreGui"):FindFirstChild("Blizzard Hub") 
+	local ui = game:GetService("CoreGui"):FindFirstChild("Qx Hub") 
 	if ui then
 		ui:Destroy()
 	end
@@ -16,7 +16,7 @@ local Mouse = LocalPlayer:GetMouse()
 
 local Atomlib = Instance.new("ScreenGui")
 
-Atomlib.Name = "Blizzard Hub"
+Atomlib.Name = "Qx Hub"
 Atomlib.Parent = game:GetService("CoreGui")
 Atomlib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -110,10 +110,10 @@ function create:Win()
 	WaterMark.Parent = Atomlib
 	WaterMark.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	WaterMark.BackgroundTransparency = 1.000
-	WaterMark.Position = UDim2.new(0.920161366, 0, 0.963156164, 0)
-	WaterMark.Size = UDim2.new(0.0796874985, 0, 0.0361781083, 0)
-	WaterMark.Image = "rbxassetid://11483425326"
-
+	WaterMark.Position = UDim2.new(0.977, 0, 0.958, 0)
+	WaterMark.Size = UDim2.new(0.02, 0, 0.036, 0)
+	WaterMark.Image = "rbxassetid://13953107829"
+	WaterMark.ImageColor3 = getgenv().Settings["Misc"]["Color"]
 
 	local function WaterMarkft() -- WaterMark.LocalScript 
 		local Info = TweenInfo.new(.3)
@@ -162,16 +162,11 @@ function create:Win()
 	Logo.AnchorPoint = Vector2.new(0.5, 0.5)
 	Logo.Position = UDim2.new(-0.11,0,0.6,0)
 	Logo.BackgroundTransparency = 1
-	Logo.Image = "rbxassetid://11511118010" 
+	Logo.Image = "rbxassetid://13953107829" 
 	Logo.Size = UDim2.new(0, 30, 0, 30)
+	Logo.ImageColor3 = getgenv().Settings["Misc"]["Color"]
 
-	spawn(function()
-		while wait() do
-			pcall(function()
-				Logo.Rotation = Logo.Rotation + 1
-			end)
-		end
-	end)
+
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
 	UIListLayout_ScolTap.SortOrder = Enum.SortOrder.LayoutOrder
