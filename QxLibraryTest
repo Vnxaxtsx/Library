@@ -237,7 +237,7 @@ function create:Win()
 	pagesFolder.Parent = Main
 
 	local QxButton = Instance.new("TextButton",Atomlib)
-	QxButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	QxButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 	QxButton.BackgroundTransparency = 0
 	QxButton.Position = UDim2.new(0.475, 0, 0.057, 0)
 	QxButton.Size = UDim2.new(0, 60, 0, 60)
