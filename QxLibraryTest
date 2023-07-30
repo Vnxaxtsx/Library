@@ -1295,7 +1295,7 @@ function create:Win()
 				end  
 				return  dropfuc
 			end
-			function ems:TextBox(placetext,value,callback)
+			function ems:TextBox(placetext,callback)
 				local ToggleFrame = Instance.new("Frame")
 
 				ToggleFrame.Name = "ToggleFrame"
@@ -1317,8 +1317,8 @@ function create:Win()
 				emsTextBox.Font = getgenv().Settings["Misc"]["Font"]
 				emsTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 				emsTextBox.TextSize = 12.000
-				emsTextBox.PlaceholderText = placetext
-				emsTextBox.Text = value
+				emsTextBox.PlaceholderText = ""
+				emsTextBox.Text = placetext
 				emsTextBox.BorderSizePixel = 0
 
 				local TextBox_Pageframe_Uiconner = Instance.new("UICorner")
@@ -1334,7 +1334,9 @@ function create:Win()
 				MheeFrameStroke.Color = getgenv().Settings["Misc"]["Color"] 
 				MheeFrameStroke.Transparency = 0
 
-
+				emsTextBox.FocusLost:Connect(function()    
+					pcall(callback,tonumber( emsTextBox.Text))
+				end)
 
 			end
 			function ems:Slider(text,min,max,de,callback)
