@@ -19,8 +19,6 @@ local Atomlib = Instance.new("ScreenGui")
 Atomlib.Name = "Qx Hub"
 Atomlib.Parent = game:GetService("CoreGui")
 Atomlib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Atomlib.IgnoreGuilnest = true
-
 
 local function MakeDraggable(topbarobject, object)
 	local Dragging = nil
@@ -238,37 +236,37 @@ function create:Win()
 	pagesFolder.Name = "pagesFolder"
 	pagesFolder.Parent = Main
 
-  local QxButton = Instance.new("ImageButton")
-  QxButton.Name = "QxButton"
-  QxButton.Size = UDim2.new(0, 60, 0, 60)
-  QxButton.Position = UDim2.new(0.436, 0, 0.055, 0)
-  QxButton.Image = "rbxassetid://14249638051"
-  QxButton.Parent = Atomlib
+	local QxButton = Instance.new("ImageButton")
+	QxButton.Name = "QxButton"
+	QxButton.Size = UDim2.new(0, 60, 0, 60)
+	QxButton.Position = UDim2.new(0.436, 0, 0.055, 0)
+	QxButton.Image = "rbxassetid://14249638051"
+	QxButton.Parent = Atomlib
 
-  local QxLogo = Instance.new("ImageLabel")
-  QxLogo.Name = "QxLogo"
-  QxLogo.Size = UDim2.new(0, 0, 0, 0)
-  QxLogo.Position = UDim2.new(1, 0, 1, 0)
-  QxLogo.Image = "rbxassetid://14249663961"
-  QxLogo.ImageColor3 = getgenv().Settings["Misc"]["Color"]
-  QxLogo.Parent = QxButton
+	local QxLogo = Instance.new("ImageLabel")
+	QxLogo.Name = "QxLogo"
+	QxLogo.Size = UDim2.new(0, 0, 0, 0)
+	QxLogo.Position = UDim2.new(1, 0, 1, 0)
+	QxLogo.Image = "rbxassetid://14249663961"
+	QxLogo.ImageColor3 = getgenv().Settings["Misc"]["Color"]
+	QxLogo.Parent = QxButton
 
 	MakeDraggable(Main,Main)
-MakeDraggable2(QxButton,QxButton)
+	MakeDraggable2(QxButton,QxButton)
 	local tween = game:GetService("TweenService")
 	local library = {currenttab = '',toggledui = false}
 	tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 395, 0, 395)}):Play()
 
 
 	QxButton.MouseButton1Click:Connect(function()
-	  if library.toggledui == false then
-		  library.toggledui = true  
-		  tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0, 0)}):Play()
-	  else 
-		  library.toggledui = false 
-		  tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 395, 0, 395)}):Play()
-	  end 
-  end)
+		if library.toggledui == false then
+			library.toggledui = true  
+			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0, 0)}):Play()
+		else 
+			library.toggledui = false 
+			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 395, 0, 395)}):Play()
+		end 
+	end)
 
 	local tap = {}
 
