@@ -236,16 +236,21 @@ function create:Win()
 	pagesFolder.Name = "pagesFolder"
 	pagesFolder.Parent = Main
 
-	local QxButton = Instance.new("ImageButton",Atomlib)
+	local QxButton = Instance.new("TextButton",Atomlib)
 	QxButton.BorderSizePixel = 0
-	QxButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	QxButton.Image = "rbxassetid://14249638051"
+	QxButton.BackgroundColor3 = Color3.fromRGB(41, 41, 41)
+	QxButton.TextSize = 14
+	QxButton.FontFace = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	QxButton.TextColor3 = Color3.fromRGB(41, 41, 41)
 	QxButton.Size = UDim2.new(0, 60, 0, 60)
 	QxButton.Name = "QxButton"
-	QxButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	QxButton.Position = UDim2.new(0.4749999940395355, 0, 0.05700000002980232, 0)
-	QxButton.BackgroundTransparency = 1
+	QxButton.BorderColor3 = Color3.fromRGB(41, 41, 41)
+	QxButton.Text = " "
+	QxButton.Position = UDim2.new(0.475, 0, 0.057, 0)
 
+	local QxCorner = Instance.new("UICorner",QxButton)
+	QxCorner.CornerRadius = UDim.new(0.2, 0)
+	
 	local QxLogo = Instance.new("ImageLabel",QxButton)
 	QxLogo.BorderSizePixel = 0
 	QxLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -256,7 +261,7 @@ function create:Win()
 	QxLogo.Position = UDim2.new(0, 0, 0, 0)
 	QxLogo.ImageColor3 = getgenv().Settings["Misc"]["Color"]
 	QxLogo.Name = "QxLogo"
-	QxLogo.BackgroundTransparency = 1
+	QxLogo.BackgroundTransparency = 0
 
 	MakeDraggable(Main,Main)
 
