@@ -1317,8 +1317,11 @@ function create:Win()
 				emsTextBox.Font = getgenv().Settings["Misc"]["Font"]
 				emsTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 				emsTextBox.TextSize = 12.000
+				emsTextBox.PlaceholderColor3 = Color3.fromRGB(255,255,255)
+				emsTextBox.TextXAlignment = Enum.TextXAlignment.Left
 				emsTextBox.PlaceholderText = ""
 				emsTextBox.Text = placetext
+				emsTextBox.TextWrapped = true
 				emsTextBox.BorderSizePixel = 0
 
 				local TextBox_Pageframe_Uiconner = Instance.new("UICorner")
