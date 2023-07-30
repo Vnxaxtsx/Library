@@ -238,7 +238,7 @@ function create:Win()
 
 	local QxButton = Instance.new("TextButton",Atomlib)
 	QxButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	QxButton.BackgroundTransparency = 1
+	QxButton.BackgroundTransparency = 0
 	QxButton.Position = UDim2.new(0.475, 0, 0.057, 0)
 	QxButton.Size = UDim2.new(0, 60, 0, 60)
 	QxButton.Font = getgenv().Settings["Misc"]["Font"]
@@ -260,7 +260,7 @@ function create:Win()
 	QxLogo.Position = UDim2.new(0, 0, 0, 0)
 	QxLogo.ImageColor3 = getgenv().Settings["Misc"]["Color"]
 	QxLogo.Name = "QxLogo"
-	QxLogo.BackgroundTransparency = 0
+	QxLogo.BackgroundTransparency = 1
 
 	MakeDraggable(Main,Main)
 
