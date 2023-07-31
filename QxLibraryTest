@@ -1,3 +1,17 @@
+
+do 
+	local ui1 = game:GetService("CoreGui"):FindFirstChild("Qx Hub") 
+	local ui2 = game:GetService("CoreGui"):FindFirstChild("BlackScreenz") 
+	if ui1 then
+		ui1:Destroy()
+		--game.Players.LocalPlayer:Kick("Stop")
+	end
+	if ui2 then
+		ui2:Destroy()
+	end
+end
+
+
 if getgenv().Settings["Misc"]["Font"] == nil then getgenv().Settings["Misc"]["Font"] = Enum.Font.Fantasy end
 if getgenv().Settings["Misc"]["Color"] == nil then getgenv().Settings["Misc"]["Color"]  = Color3.fromRGB(173, 48, 48) end
 
