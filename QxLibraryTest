@@ -1346,6 +1346,7 @@ function create:Win()
 				MheeFrameStroke.Transparency = 0
 
 				emsTextBox.FocusLost:Connect(function()    
+					emsTextBox.Text = tostring(emsTextBox.Text)
 					pcall(callback,tonumber( emsTextBox.Text))
 				end)
 
