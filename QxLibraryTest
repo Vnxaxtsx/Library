@@ -1303,54 +1303,7 @@ function create:Win()
 				end  
 				return  dropfuc
 			end
-			function ems:TextBox(placetext,callback)
-				local ToggleFrame = Instance.new("Frame")
-
-				ToggleFrame.Name = "ToggleFrame"
-				ToggleFrame.Parent = ScolPage2
-				ToggleFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-				ToggleFrame.BorderSizePixel = 0
-				ToggleFrame.BackgroundTransparency = 1
-				ToggleFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-				ToggleFrame.Size = UDim2.new(0, 155, 0, 22)
-
-				local emsTextBox = Instance.new("TextBox")
-
-				emsTextBox.Parent = ToggleFrame
-				emsTextBox.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-				emsTextBox.BackgroundTransparency = 1
-				emsTextBox.AnchorPoint = Vector2.new(0.5, 0.5)
-				emsTextBox.Position = UDim2.new(0.5, 0, 0.5, 0)
-				emsTextBox.Size = UDim2.new(1, 0, 0.8, 0)
-				emsTextBox.Font = getgenv().Settings["Misc"]["Font"]
-				emsTextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-				emsTextBox.TextSize = 12.000
-				emsTextBox.PlaceholderColor3 = Color3.fromRGB(255,255,255)
-				emsTextBox.TextXAlignment = Enum.TextXAlignment.Left
-				emsTextBox.PlaceholderText = ""
-				emsTextBox.Text = placetext
-				emsTextBox.TextWrapped = true
-				emsTextBox.BorderSizePixel = 0
-
-				local TextBox_Pageframe_Uiconner = Instance.new("UICorner")
-
-				TextBox_Pageframe_Uiconner.CornerRadius = UDim.new(0, 3)
-				TextBox_Pageframe_Uiconner.Name = ""
-				TextBox_Pageframe_Uiconner.Parent = ToggleFrame
-
-				local MheeFrameStroke = Instance.new("UIStroke",ToggleFrame)
-
-				MheeFrameStroke.Thickness = 1
-				MheeFrameStroke.LineJoinMode = Enum.LineJoinMode.Round
-				MheeFrameStroke.Color = getgenv().Settings["Misc"]["Color"] 
-				MheeFrameStroke.Transparency = 0
-
-				emsTextBox.FocusLost:Connect(function()    
-					emsTextBox.Text = tostring(emsTextBox.Text)
-					pcall(callback,tonumber( emsTextBox.Text))
-				end)
-
-			end
+			
 			function ems:Slider(text,min,max,de,callback)
 				local SliderFunc = {}
 				local SliderFrame = Instance.new("Frame")
