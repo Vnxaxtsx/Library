@@ -1,14 +1,12 @@
 
 do 
 	local ui1 = game:GetService("CoreGui"):FindFirstChild("Qx Hub") 
-	local ui2 = game:GetService("CoreGui"):FindFirstChild("BlackScreenz") 
+	
 	if ui1 then
 		ui1:Destroy()
 		--game.Players.LocalPlayer:Kick("Stop")
 	end
-	if ui2 then
-		ui2:Destroy()
-	end
+
 end
 
 
