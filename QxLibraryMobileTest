@@ -274,7 +274,7 @@ function create:Win()
 
 	local tween = game:GetService("TweenService")
 	local library = {currenttab = '',toggledui = false}
-	tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 197, 0, 197)}):Play()
+	tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 280, 0, 280)}):Play()
 
 
 	QxButton.MouseButton1Click:Connect(function()
@@ -283,7 +283,7 @@ function create:Win()
 			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0, 0)}):Play()
 		else 
 			library.toggledui = false 
-			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 197, 0, 197)}):Play()
+			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 280, 0, 280)}):Play()
 		end 
 	end)
 
@@ -330,7 +330,7 @@ function create:Win()
 		MainFramePage.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
 		MainFramePage.BorderSizePixel = 0
 		MainFramePage.Position = UDim2.new(0, 0, 0.141772151, 0)
-		MainFramePage.Size = UDim2.new(0, 197, 0, 339)
+		MainFramePage.Size = UDim2.new(0, 280, 0, 339)
 		MainFramePage.Visible = false 
 		UICorner_MainFramePage.Parent = MainFramePage
 		UICorner_MainFramePage.CornerRadius = UDim.new(0, 10)
@@ -353,7 +353,7 @@ function create:Win()
 		FramePage.BorderSizePixel = 0
 		FramePage.ClipsDescendants = true
 		FramePage.Position = UDim2.new(-0.0136, 0, 0.02359882, 0)
-		FramePage.Size = UDim2.new(0, 197, 0, 331)
+		FramePage.Size = UDim2.new(0, 280, 0, 331)
 		FramePage.Visible = true 
 		UICorner_FramePage.Name = "UICorner"
 		UICorner_FramePage.Parent = FramePage
@@ -364,7 +364,7 @@ function create:Win()
 		ScolPage.Active = true
 		ScolPage.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 		ScolPage.BorderSizePixel = 0
-		ScolPage.Size = UDim2.new(0, 197, 0, 324)
+		ScolPage.Size = UDim2.new(0, 280, 0, 324)
 		ScolPage.ScrollBarThickness = 3
 		ScolPage.ScrollBarImageColor3 =  getgenv().Settings["Misc"]["Color"] 
 		local UICorner_ScolPage = Instance.new("UICorner")
@@ -377,7 +377,7 @@ function create:Win()
 		MainPage.BackgroundTransparency = 1 
 		MainPage.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 		MainPage.BorderSizePixel = 0
-		MainPage.Size = UDim2.new(0, 197, 0, 324)
+		MainPage.Size = UDim2.new(0, 280, 0, 324)
 
 		local UICorner_MP = Instance.new("UICorner")
 
