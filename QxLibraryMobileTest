@@ -242,7 +242,7 @@ function create:Win()
 	PageTap.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	PageTap.BackgroundTransparency = 1
 	PageTap.BorderSizePixel = 0
-	PageTap.Position = UDim2.new(0, 0, 0, 0)
+	PageTap.Position = UDim2.new(0.08, 0, 0, 0)
 	PageTap.Size = UDim2.new(0, 320, 0, 56)
 
 
@@ -1110,7 +1110,7 @@ function create:Win()
 
 				UIListLayout_MainPage_list.Parent = ScolPage_list
 				UIListLayout_MainPage_list.SortOrder = Enum.SortOrder.LayoutOrder
-				UIListLayout_MainPage_list.Padding = UDim.new(0, 5)
+				UIListLayout_MainPage_list.Padding = UDim.new(0, 30)
 
 				UIPadding_MainPage_list.Parent = ScolPage_list
 				UIPadding_MainPage_list.PaddingLeft = UDim.new(0, 0)
