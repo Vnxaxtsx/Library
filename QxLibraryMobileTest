@@ -286,7 +286,7 @@ function create:Win()
 	QxButton.Position = UDim2.new(0.475, 0, 0.057, 0)
 	QxButton.Size = UDim2.new(0, 60, 0, 60)
 	QxButton.Font = getgenv().Settings["Misc"]["Font"]
-	QxButton.TextColor3 = Color3.fromRGB(250, 250, 250)
+	QxButton.TextColor3 = Color3.fromRGB(200, 200, 200)
 	QxButton.TextSize = 14.000
 	QxButton.TextWrapped = true
 	QxButton.Text = ""
@@ -349,7 +349,7 @@ function create:Win()
 		TextButton_Tap.Position = UDim2.new(0.00, 0, 0.132352948, 0)
 		TextButton_Tap.Size = UDim2.new(0, 75, 0, 50)
 		TextButton_Tap.Font = getgenv().Settings["Misc"]["Font"]
-		TextButton_Tap.TextColor3 = Color3.fromRGB(250, 250, 250)
+		TextButton_Tap.TextColor3 = Color3.fromRGB(200, 200, 200)
 		TextButton_Tap.TextSize = 14.000
 		TextButton_Tap.TextWrapped = true
 		TextButton_Tap.Text = text
@@ -481,7 +481,7 @@ function create:Win()
 					TweenService:Create(
 						v,
 						TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{TextColor3 = Color3.fromRGB(250, 250, 250)}
+						{TextColor3 = Color3.fromRGB(200, 200, 200)}
 					):Play()
 
 
@@ -580,7 +580,7 @@ function create:Win()
 				ToggleFrame.BorderSizePixel = 0
 				ToggleFrame.BackgroundTransparency = 1
 				ToggleFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-				ToggleFrame.Size = UDim2.new(0, 250, 0, 22)
+				ToggleFrame.Size = UDim2.new(0, 200, 0, 22)
 
 				local emsTextButton = Instance.new("TextButton")
 
@@ -673,7 +673,7 @@ function create:Win()
 				ToggleFrame1.BorderSizePixel = 0
 				ToggleFrame1.BackgroundTransparency = 0
 				ToggleFrame1.Position = UDim2.new(0.5, 0, 0.5, 0)
-				ToggleFrame1.Size = UDim2.new(0, 250, 0, 22)
+				ToggleFrame1.Size = UDim2.new(0, 200, 0, 22)
 
 				local emsTextButton1 = Instance.new("TextButton")
 
@@ -777,7 +777,7 @@ function create:Win()
 				ToggleButton.BackgroundTransparency = 1
 				ToggleButton.AnchorPoint = Vector2.new(0, 0.5)
 				ToggleButton.Position = UDim2.new(0.5, 0, 0.5, 0)
-				ToggleButton.Size = UDim2.new(0, 250, 0, 25)
+				ToggleButton.Size = UDim2.new(0, 200, 0, 25)
 				ToggleButton.Font = getgenv().Settings["Misc"]["Font"]
 				ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 				ToggleButton.TextSize = 11.000
@@ -974,7 +974,7 @@ function create:Win()
 				DropFrame.BackgroundTransparency = 1
 				DropFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 				DropFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-				DropFrame.Size = UDim2.new(0, 250, 0, 45)
+				DropFrame.Size = UDim2.new(0, 200, 0, 45)
 				DropFrame.BackgroundTransparency = 1
 				DropFrame.ClipsDescendants = true  
 
@@ -1003,7 +1003,7 @@ function create:Win()
 				DropButton.BackgroundTransparency = 1
 				DropButton.AnchorPoint = Vector2.new(0.5, 0.5)
 				DropButton.Position = UDim2.new(0.5, 0, 0.5, 0)
-				DropButton.Size = UDim2.new(0, 250, 0, 24)
+				DropButton.Size = UDim2.new(0, 200, 0, 24)
 				DropButton.Font = getgenv().Settings["Misc"]["Font"]
 				DropButton.TextColor3 = getgenv().Settings["Misc"]["Color"] 
 				DropButton.TextSize = 12.000
@@ -1021,7 +1021,7 @@ function create:Win()
 				TextLabelDrop2.BackgroundTransparency = 1
 				TextLabelDrop2.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextLabelDrop2.Position = UDim2.new(0.5, 0, 0.5, 0)
-				TextLabelDrop2.Size = UDim2.new(0, 250, 0, 22)
+				TextLabelDrop2.Size = UDim2.new(0, 200, 0, 22)
 				TextLabelDrop2.Font = getgenv().Settings["Misc"]["Font"]
 				TextLabelDrop2.Text = text
 				TextLabelDrop2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1083,7 +1083,7 @@ function create:Win()
 				ListFrame.BackgroundTransparency = 1
 				ListFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 				ListFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-				ListFrame.Size = UDim2.new(0, 250, 0, 0)
+				ListFrame.Size = UDim2.new(0, 200, 0, 0)
 				ListFrame.BorderSizePixel = 0 
 				ListFrame.ClipsDescendants = true 
 				ListFrame.Visible = false 
@@ -1100,7 +1100,7 @@ function create:Win()
 				ScolPage_list.Active = true
 				ScolPage_list.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 				ScolPage_list.BorderSizePixel = 0
-				ScolPage_list.Size = UDim2.new(0, 250, 0, 0)
+				ScolPage_list.Size = UDim2.new(0, 200, 0, 0)
 				ScolPage_list.ScrollBarThickness = 3
 				ScolPage_list.AnchorPoint = Vector2.new(0.5, 0.5)
 				ScolPage_list.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -1141,7 +1141,7 @@ function create:Win()
 					listDropButton.Parent = ScolPage_list
 					listDropButton.BackgroundColor3 = Color3.fromRGB(15, 15 ,15)
 					listDropButton.BorderSizePixel = 0
-					listDropButton.Size = UDim2.new(0, 250, 0, 24)
+					listDropButton.Size = UDim2.new(0, 200, 0, 24)
 					listDropButton.Font = getgenv().Settings["Misc"]["Font"]
 					listDropButton.Text = tostring(v)
 					listDropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1154,16 +1154,16 @@ function create:Win()
 						TweenService:Create(
 							ListFrame,
 							TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, 0)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, 0)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						TweenService:Create(
 							ScolPage_list,
 							TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, 0)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, 0)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						repeat
 							wait()
-						until ScolPage_list.Size ==  UDim2.new(0, 250, 0, 0)
+						until ScolPage_list.Size ==  UDim2.new(0, 200, 0, 0)
 						ListFrame.Visible = false
 						TextLabelDrop2.Text = tostring(v)  
 						callback(v)
@@ -1202,12 +1202,12 @@ function create:Win()
 						TweenService:Create(
 							ListFrame,
 							TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						TweenService:Create(
 							ScolPage_list,
 							TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 
 					else
@@ -1219,16 +1219,16 @@ function create:Win()
 						TweenService:Create(
 							ListFrame,
 							TweenInfo.new(0.2, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, 0)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, 0)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						TweenService:Create(
 							ScolPage_list,
 							TweenInfo.new(0.2, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, 0)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, 0)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						repeat
 							wait()
-						until ScolPage_list.Size ==  UDim2.new(0, 250, 0, 0)
+						until ScolPage_list.Size ==  UDim2.new(0, 200, 0, 0)
 						ListFrame.Visible = false
 					end
 					checkdrop.checkscol  = not    checkdrop.checkscol  
@@ -1247,12 +1247,12 @@ function create:Win()
 						TweenService:Create(
 							ListFrame,
 							TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						TweenService:Create(
 							ScolPage_list,
 							TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, framesize)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 
 					else
@@ -1264,16 +1264,16 @@ function create:Win()
 						TweenService:Create(
 							ListFrame,
 							TweenInfo.new(0.2, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, 0)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, 0)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						TweenService:Create(
 							ScolPage_list,
 							TweenInfo.new(0.2, Enum.EasingStyle.Back, Enum.EasingDirection.Out),
-							{Size =  UDim2.new(0, 250, 0, 0)} -- UDim2.new(0, 128, 0, 25)
+							{Size =  UDim2.new(0, 200, 0, 0)} -- UDim2.new(0, 128, 0, 25)
 						):Play()
 						repeat
 							wait()
-						until ScolPage_list.Size ==  UDim2.new(0, 250, 0, 0)
+						until ScolPage_list.Size ==  UDim2.new(0, 200, 0, 0)
 						ListFrame.Visible = false
 					end
 					checkdrop.checkscol  = not    checkdrop.checkscol  
@@ -1287,7 +1287,7 @@ function create:Win()
 					listDropButton.Parent = ScolPage_list
 					listDropButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 					listDropButton.BorderSizePixel = 0
-					listDropButton.Size = UDim2.new(0, 250, 0, 24)
+					listDropButton.Size = UDim2.new(0, 200, 0, 24)
 					listDropButton.Font = getgenv().Settings["Misc"]["Font"]
 					listDropButton.Text = tostring(text2)
 					listDropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1362,7 +1362,7 @@ function create:Win()
 				SliderFrame.BorderSizePixel = 0
 				SliderFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
 				SliderFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-				SliderFrame.Size = UDim2.new(0, 250, 0, 50)
+				SliderFrame.Size = UDim2.new(0, 200, 0, 50)
 				SliderFrame.BackgroundTransparency = 1
 				SliderFrame.ClipsDescendants = true 
 
@@ -1427,7 +1427,7 @@ function create:Win()
 
 				SecValue.Name = "SecValue"
 				SecValue.Parent = ValueFrame
-				SecValue.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+				SecValue.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
 				SecValue.BorderSizePixel = 0
 				SecValue.BackgroundTransparency = 0
 				SecValue.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -1627,7 +1627,7 @@ function create:Win()
 				tiframe.ClipsDescendants = true
 				tiframe.AnchorPoint = Vector2.new(0.5, 0.5)
 				tiframe.Position = UDim2.new(0.5, 0, 0.5, 0)
-				tiframe.Size = UDim2.new(0, 250, 0, 20)
+				tiframe.Size = UDim2.new(0, 200, 0, 20)
 
 				local  lineframe = Instance.new("TextLabel")
 
@@ -1682,7 +1682,7 @@ function create:Win()
 				Labelxd.AnchorPoint = Vector2.new(0.5, 0.5)
 				Labelxd.Position = UDim2.new(0.5, 0, 0.8, 0)
 				Labelxd.BorderSizePixel = 0
-				Labelxd.Size = UDim2.new(0, 250, 0, 13)
+				Labelxd.Size = UDim2.new(0, 200, 0, 13)
 				Labelxd.Font = getgenv().Settings["Misc"]["Font"]
 				Labelxd.Text = tostring(text)
 				Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1705,7 +1705,7 @@ function create:Win()
 				Labelxd.AnchorPoint = Vector2.new(0.5, 0.5)
 				Labelxd.Position = UDim2.new(0.5, 0, 0.8, 0)
 				Labelxd.BorderSizePixel = 0
-				Labelxd.Size = UDim2.new(0, 250, 0, 13)
+				Labelxd.Size = UDim2.new(0, 200, 0, 13)
 				Labelxd.Font = getgenv().Settings["Misc"]["Font"]
 				Labelxd.Text = tostring(text)
 				Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1729,7 +1729,7 @@ function create:Win()
 				Labelxd.AnchorPoint = Vector2.new(0.5, 0.5)
 				Labelxd.Position = UDim2.new(0.5, 0, 0.8, 0)
 				Labelxd.BorderSizePixel = 0
-				Labelxd.Size = UDim2.new(0, 250, 0, 13)
+				Labelxd.Size = UDim2.new(0, 200, 0, 13)
 				Labelxd.Font = getgenv().Settings["Misc"]["Font"]
 				Labelxd.Text = tostring(text)
 				Labelxd.TextColor3 = Color3.fromRGB(255, 255, 255)
