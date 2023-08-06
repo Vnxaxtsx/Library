@@ -25,120 +25,110 @@ local Atomlib = Instance.new("ScreenGui")
 Atomlib.Name = "Qx Hub"
 Atomlib.Parent = game:GetService("CoreGui")
 Atomlib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-local function MakeDraggable(topbarobject, object)
-	local Dragging = nil
-	local DragInput = nil
-	local DragStart = nil
-	local StartPosition = nil
-
-	local function Update(input)
-		local Delta = input.Position - DragStart
-		local pos =
-			UDim2.new(
-				StartPosition.X.Scale,
-				StartPosition.X.Offset + Delta.X,
-				StartPosition.Y.Scale,
-				StartPosition.Y.Offset + Delta.Y
-			)
-		local Tween = TweenService:Create(object, TweenInfo.new(0.2), {Position = pos})
-		Tween:Play()
+function dragify(p1)
+	dragToggle = nil
+	dragInput = nil
+	dragStart = nil
+	function updateInput(p2)
+		local v1 = p2.Position - dragStart
+		game:GetService("TweenService"):Create(p1, TweenInfo.new(0.3), {
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + v1.X, startPos.Y.Scale, startPos.Y.Offset + v1.Y)
+		}):Play()
 	end
-
-	topbarobject.InputBegan:Connect(
-		function(input)
-			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-				Dragging = true
-				DragStart = input.Position
-				StartPosition = object.Position
-
-				input.Changed:Connect(
-					function()
-						if input.UserInputState == Enum.UserInputState.End then
-							Dragging = false
+	p1.InputBegan:Connect(function(p3)
+		if p3.UserInputType ~= Enum.UserInputType.MouseButton1 then
+			if p3.UserInputType == Enum.UserInputType.Touch then
+				if UserInputService:GetFocusedTextBox() == nil then
+					dragToggle = true
+					dragStart = p3.Position
+					startPos = p1.Position
+					p3.Changed:Connect(function()
+						if p3.UserInputState == Enum.UserInputState.End then
+							dragToggle = false
 						end
-					end
-				)
+					end)
+				end
+			end
+		elseif UserInputService:GetFocusedTextBox() == nil then
+			dragToggle = true
+			dragStart = p3.Position
+			startPos = p1.Position
+			p3.Changed:Connect(function()
+				if p3.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	p1.InputChanged:Connect(function(p4)
+		if p4.UserInputType ~= Enum.UserInputType.MouseMovement then
+			if p4.UserInputType == Enum.UserInputType.Touch then
+				dragInput = p4
+			end
+		else
+			dragInput = p4
+		end
+	end)
+	game:GetService("UserInputService").InputChanged:Connect(function(p5)
+		if p5 == dragInput then
+			if dragToggle then
+				updateInput(p5)
 			end
 		end
-	)
-
-	topbarobject.InputChanged:Connect(
-		function(input)
-			if
-				input.UserInputType == Enum.UserInputType.MouseMovement or
-				input.UserInputType == Enum.UserInputType.Touch
-			then
-				DragInput = input
-			end
-		end
-	)
-
-	UserInputService.InputChanged:Connect(
-		function(input)
-			if input == DragInput and Dragging then
-				Update(input)
-			end
-		end
-	)
+	end)
 end
-local function MakeDraggable2(topbarobject, object)
-	local Dragging = nil
-	local DragInput = nil
-	local DragStart = nil
-	local StartPosition = nil
-
-	local function Update(input)
-		local Delta = input.Position - DragStart
-		local pos =
-			UDim2.new(
-				StartPosition.X.Scale,
-				StartPosition.X.Offset + Delta.X,
-				StartPosition.Y.Scale,
-				StartPosition.Y.Offset + Delta.Y
-			)
-		local Tween = TweenService:Create(object, TweenInfo.new(0.2), {Position = pos})
-		Tween:Play()
+function dragify2(p1)
+	dragToggle = nil
+	dragInput = nil
+	dragStart = nil
+	function updateInput(p2)
+		local v1 = p2.Position - dragStart
+		game:GetService("TweenService"):Create(p1, TweenInfo.new(0.3), {
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + v1.X, startPos.Y.Scale, startPos.Y.Offset + v1.Y)
+		}):Play()
 	end
-
-	topbarobject.InputBegan:Connect(
-		function(input)
-			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-				Dragging = true
-				DragStart = input.Position
-				StartPosition = object.Position
-
-				input.Changed:Connect(
-					function()
-						if input.UserInputState == Enum.UserInputState.End then
-							Dragging = false
+	p1.InputBegan:Connect(function(p3)
+		if p3.UserInputType ~= Enum.UserInputType.MouseButton1 then
+			if p3.UserInputType == Enum.UserInputType.Touch then
+				if UserInputService:GetFocusedTextBox() == nil then
+					dragToggle = true
+					dragStart = p3.Position
+					startPos = p1.Position
+					p3.Changed:Connect(function()
+						if p3.UserInputState == Enum.UserInputState.End then
+							dragToggle = false
 						end
-					end
-				)
+					end)
+				end
+			end
+		elseif UserInputService:GetFocusedTextBox() == nil then
+			dragToggle = true
+			dragStart = p3.Position
+			startPos = p1.Position
+			p3.Changed:Connect(function()
+				if p3.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	p1.InputChanged:Connect(function(p4)
+		if p4.UserInputType ~= Enum.UserInputType.MouseMovement then
+			if p4.UserInputType == Enum.UserInputType.Touch then
+				dragInput = p4
+			end
+		else
+			dragInput = p4
+		end
+	end)
+	game:GetService("UserInputService").InputChanged:Connect(function(p5)
+		if p5 == dragInput then
+			if dragToggle then
+				updateInput(p5)
 			end
 		end
-	)
-
-	topbarobject.InputChanged:Connect(
-		function(input)
-			if
-				input.UserInputType == Enum.UserInputType.MouseMovement or
-				input.UserInputType == Enum.UserInputType.Touch
-			then
-				DragInput = input
-			end
-		end
-	)
-
-	UserInputService.InputChanged:Connect(
-		function(input)
-			if input == DragInput and Dragging then
-				Update(input)
-			end
-		end
-	)
+	end)
 end
-
 
 local create = {}
 
@@ -258,9 +248,9 @@ function create:Win()
 	QxLogo.Name = "QxLogo"
 	QxLogo.BackgroundTransparency = 1
 
-	MakeDraggable(Main,Main)
+	dragify(Main)
 
-	MakeDraggable2(QxButton,QxButton)
+	dragify2(QxButton)
 
 	local tween = game:GetService("TweenService")
 	local library = {currenttab = '',toggledui = false}
@@ -286,7 +276,7 @@ function create:Win()
 			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 280, 0, 280)}):Play()
 		end 
 	end)
-	
+
 
 	local tap = {}
 
