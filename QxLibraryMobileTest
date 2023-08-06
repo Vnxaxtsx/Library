@@ -147,7 +147,6 @@ function create:Win()
 	local fs = false 
 	local currentservertoggled = ""
 	local Main = Instance.new("Frame")   
-	local Logo = Instance.new("ImageLabel")
 	local UICorner_Main = Instance.new("UICorner")
 
 	Main.Name = "Main"
@@ -218,15 +217,6 @@ function create:Win()
 	ScolTap.ScrollBarThickness = 3
 	ScolTap.ScrollBarImageColor3 =  Color3.fromRGB(235, 235, 235)
 
-	Logo.Name = "Logo"
-	Logo.Parent = PageTap 
-	Logo.AnchorPoint = Vector2.new(0.5, 0.5)
-	Logo.Position = UDim2.new(-0.11,0,0.6,0)
-	Logo.BackgroundTransparency = 1
-	Logo.Image = "rbxassetid://13953107829" 
-	Logo.Size = UDim2.new(0, 30, 0, 30)
-	Logo.ImageColor3 = getgenv().Settings["Misc"]["Color"]
-
 
 	UIListLayout_ScolTap.Parent = ScolTap
 	UIListLayout_ScolTap.FillDirection = Enum.FillDirection.Horizontal
@@ -286,6 +276,17 @@ function create:Win()
 			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 280, 0, 280)}):Play()
 		end 
 	end)
+
+	QxButton.TouchTap:Connect(function()
+		if library.toggledui == false then
+			library.toggledui = true  
+			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0, 0)}):Play()
+		else 
+			library.toggledui = false 
+			tween:Create(Main,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 280, 0, 280)}):Play()
+		end 
+	end)
+	
 
 	local tap = {}
 
@@ -490,7 +491,7 @@ function create:Win()
 			ScolPage2.Active = true
 			ScolPage2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			ScolPage2.BorderSizePixel = 0
-			ScolPage2.Size = UDim2.new(0, 185, 0, 298)
+			ScolPage2.Size = UDim2.new(0, 250, 0, 298)
 			ScolPage2.ScrollBarThickness = 0
 			ScolPage2.ScrollBarImageColor3 =  Color3.fromRGB(235, 235, 235)
 
