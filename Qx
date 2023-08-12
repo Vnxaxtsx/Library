@@ -1,9 +1,15 @@
+
 do 
-	local ui = game:GetService("CoreGui"):FindFirstChild("Qx Hub") 
-	if ui then
-		ui:Destroy()
+	local ui1 = game:GetService("CoreGui"):FindFirstChild("Qx Hub") 
+	
+	if ui1 then
+		ui1:Destroy()
+		--game.Players.LocalPlayer:Kick("Stop")
 	end
+
 end
+
+
 if getgenv().Settings["Misc"]["Font"] == nil then getgenv().Settings["Misc"]["Font"] = Enum.Font.Fantasy end
 if getgenv().Settings["Misc"]["Color"] == nil then getgenv().Settings["Misc"]["Color"]  = Color3.fromRGB(173, 48, 48) end
 
@@ -1295,7 +1301,7 @@ function create:Win()
 				end  
 				return  dropfuc
 			end
-
+			
 			function ems:Slider(text,min,max,de,callback)
 				local SliderFunc = {}
 				local SliderFrame = Instance.new("Frame")
